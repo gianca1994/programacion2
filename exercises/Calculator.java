@@ -25,34 +25,42 @@ public class Calculator {
 
         switch(operacion){
             case "1":
-                public void sum() {
-                    int resultSum = num1 + num2;
-                    System.out.println("resultSum: " + resultSum);
-                }
+
                 break;
 
             case "2":
-                public void subtraction() {
-                    int resultSum = num1 - num2;
-                    System.out.println("resultSubtraction: " + resultSubtraction);
-                }
+                
                 break;
 
             case "3":
-                public void multiplication() {
-                    int resultMultiplication = num1 * num2;
-                    System.out.println("resultMultiplication: " + resultMultiplication);
-                }
+                
                 break;
             
             case "4":
-                public void division() {
-                    float resultDivision = num1 / num2;
-                    System.out.println("resultDivision: " + resultDivision);
-                } 
+                
                 break;
 
             case "5":
                 break;
+
+            public void sum() {
+                int resultSum = num1 + num2;
+                System.out.println("resultSum: " + resultSum);
+            }
+
+            public void subtraction() {
+                int resultSum = num1 - num2;
+                System.out.println("resultSubtraction: " + resultSubtraction);
+            }
+
+            public void multiplication() {
+                int resultMultiplication = num1 * num2;
+                System.out.println("resultMultiplication: " + resultMultiplication);
+            }
+
+            public void division() {
+                float resultDivision = num1 / num2;
+                System.out.println("resultDivision: " + resultDivision);
+            } 
     }
 }
