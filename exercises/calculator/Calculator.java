@@ -1,4 +1,5 @@
 package calculator;
+
 import java.util.Scanner;
 
 class Main {
@@ -12,14 +13,14 @@ class Main {
 
         messages.msgWelcome();
 
-        num_of_numbers = variable.nextInt(); 
+        num_of_numbers = variable.nextInt();
 
         if (num_of_numbers > 2) {
             multivar.multiVariable(num_of_numbers);
-        }else{
+        } else {
             messages.msgFirstNumber();
             num1 = variable.nextInt();
-    
+
             messages.msgSecondNumber();
             num2 = variable.nextInt();
 
@@ -28,7 +29,7 @@ class Main {
     }
 }
 
-class MultiVar{
+class MultiVar {
 
     public void multiVariable(int opt) {
         Scanner variable = new Scanner(System.in);
@@ -40,9 +41,12 @@ class MultiVar{
 
             int num = variable.nextInt();
             System.out.println(num);
-            
-            if (i==opt) {break;}
-        }    
+
+            if (i == opt) {
+                break;
+            }
+        }
     }
 }
+
 
