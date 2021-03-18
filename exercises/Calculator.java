@@ -17,6 +17,10 @@ class Main {
         System.out.println("Second number:");
         num2 = variable.nextInt();
 
+        for (int i = 0; i < 11; i++) {
+    
+        }
+
         menuInfoMenu.menuInfo(num1, num2);
     }
 }
@@ -26,13 +30,9 @@ class Menu {
 
         Scanner variable = new Scanner(System.in);
         Functions function = new Functions();
+        Messages messages = new Messages();
 
-        System.out.println("Enter the option you want to perform: ");
-        System.out.println("1- Sum");
-        System.out.println("2- Subtraction");
-        System.out.println("3- Multiplication");
-        System.out.println("4- Division");
-        System.out.println("5- Exit");
+        messages.msgMenu();
 
         int opt = variable.nextInt();
 
@@ -61,23 +61,53 @@ class Menu {
 
 class Functions{
 
+    Messages messages = new Messages();
+
     public void sum(int num1, int num2) {
         int resultSum = num1 + num2;
-        System.out.println("resultSum: " + resultSum);
+        messages.msgSum(resultSum);
     }
 
     public void subtraction(int num1, int num2) {
         int resultSubtraction = num1 - num2;
-        System.out.println("resultSubtraction: " + resultSubtraction);
+        messages.msgSubtrac(resultSubtraction);
     }
 
     public void multiplication(int num1, int num2) {
         int resultMultiplication = num1 * num2;
-        System.out.println("resultMultiplication: " + resultMultiplication);
+        messages.msgmult(resultMultiplication);
     }
 
     public void division(float num1, float num2) {
         float resultDivision = num1 / num2;
-        System.out.println("resultDivision: " + resultDivision);
+        messages.msgdiv(resultDivision);
+    }
+}
+
+
+class Messages{
+    public void msgMenu(){
+        System.out.println("Enter the option you want to perform: ");
+        System.out.println("1- Sum");
+        System.out.println("2- Subtraction");
+        System.out.println("3- Multiplication");
+        System.out.println("4- Division");
+        System.out.println("5- Exit");
+    }
+
+    public void msgSum(int val){
+        System.out.println("Result of the sum: " + val);
+    }
+
+    public void msgSubtrac(int val){
+        System.out.println("Result of the subtraction: " + val);
+    }
+
+    public void msgmult(int val){
+        System.out.println("Multiplication result: " + val);
+    }
+
+    public void msgdiv(float val){
+        System.out.println("Division result: " + val);
     }
 }
