@@ -2,7 +2,7 @@ package calculator;
 import java.util.Scanner;
 
 public class Menu {
-    public void menuInfo(int number1, int number2) {
+    public void menuInfo(int num1, int num2) {
 
         Scanner variable = new Scanner(System.in);
         Functions function = new Functions();
@@ -14,19 +14,19 @@ public class Menu {
 
         switch (opt) {
             case 1:
-                function.sum(number1, number2);
+                function.sum(num1, num2);
                 break;
 
             case 2:
-                function.subtraction(number1, number2);
+                function.subtraction(num1, num2);
                 break;
 
             case 3:
-                function.multiplication(number1, number2);
+                function.multiplication(num1, num2);
                 break;
 
             case 4:
-                function.division(number1, number2);
+                function.division(num1, num2);
                 break;
 
             case 5:

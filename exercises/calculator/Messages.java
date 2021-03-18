@@ -1,6 +1,7 @@
 package calculator;
 
 public class Messages {
+    
     public void msgWelcome(){
         System.out.println("Welcome to the calculator, enter the number of numbers to which you want to apply an operation");
     }
