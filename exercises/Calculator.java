@@ -1,66 +1,68 @@
 import java.util.Scanner;
 
-public class Calculator {
+class Calculator{
+
     public static void main(String[] args) {
 
         Scanner variable = new Scanner(System.in);
 
+        int num1, num2;
+
         System.out.println("Welcome to the calculator programmed in java then enter 2 numbers");
-        
+            
         System.out.println("First number:");
-        int num1 = variable.nextInt();
+        num1 = variable.nextInt();
 
         System.out.println("Second number:");
-        int num2 = variable.nextInt();
+        num2 = variable.nextInt();
 
-        System.out.println("Enter the option you want to perform: 
-            1- Sum
-            2- Subtraction
-            3- Multiplication
-            4- Division
-            5- Exit"
-        );
+        System.out.println("Enter the option you want to perform: ");
+        System.out.println("1- Sum");
+        System.out.println("2- Subtraction");
+        System.out.println("3- Multiplication");
+        System.out.println("4- Division");
+        System.out.println("5- Exit");
 
         int operacion = variable.nextInt();
 
         switch(operacion){
-            case "1":
-
+            case 1:
+                sum(num1, num2);
                 break;
 
-            case "2":
-                
+            case 2:
+                subtraction(num1, num2);
                 break;
 
-            case "3":
-                
+            case 3:
+                multiplication(num1, num2);
                 break;
             
-            case "4":
-                
+            case 4:
+                division(num1, num2);
                 break;
 
-            case "5":
-                break;
+            case 5:
+                break;}}
 
-            public void sum() {
-                int resultSum = num1 + num2;
-                System.out.println("resultSum: " + resultSum);
-            }
+        private static void sum(int num1, int num2) {
+            int resultSum = num1 + num2;
+            System.out.println("resultSum: " + resultSum);
+        }
 
-            public void subtraction() {
-                int resultSum = num1 - num2;
-                System.out.println("resultSubtraction: " + resultSubtraction);
-            }
+        private static void subtraction(int num1, int num2) {
+            int resultSubtraction = num1 - num2;
+            System.out.println("resultSubtraction: " + resultSubtraction);
+        }
 
-            public void multiplication() {
-                int resultMultiplication = num1 * num2;
-                System.out.println("resultMultiplication: " + resultMultiplication);
-            }
+        private static void multiplication(int num1, int num2) {
+            int resultMultiplication = num1 * num2;
+            System.out.println("resultMultiplication: " + resultMultiplication);
+        }
 
-            public void division() {
-                float resultDivision = num1 / num2;
-                System.out.println("resultDivision: " + resultDivision);
-            } 
-    }
+        private static void division(int num1, int num2) {
+            float resultDivision = num1 / num2;
+            System.out.println("resultDivision: " + resultDivision);
+        }
+    
 }
