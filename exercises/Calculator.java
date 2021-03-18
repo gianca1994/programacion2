@@ -4,24 +4,26 @@ class Main {
     public static void main(String[] args) {
 
         Menu menuInfoMenu = new Menu();
-
+        Messages messages = new Messages();
+        MultiVar multivar = new MultiVar();
         Scanner variable = new Scanner(System.in);
+        int num1, num2, num_of_numbers;
 
-        int num1, num2;
+        messages.msgWelcome();
 
-        System.out.println("Welcome to the calculator programmed in java then enter 2 numbers");
+        num_of_numbers = variable.nextInt(); 
 
-        System.out.println("First number:");
-        num1 = variable.nextInt();
-
-        System.out.println("Second number:");
-        num2 = variable.nextInt();
-
-        for (int i = 0; i < 11; i++) {
+        if (num_of_numbers > 2) {
+            multivar.multiVariable(num_of_numbers);
+        }else{
+            messages.msgFirstNumber();
+            num1 = variable.nextInt();
     
-        }
+            messages.msgSecondNumber();
+            num2 = variable.nextInt();
 
-        menuInfoMenu.menuInfo(num1, num2);
+            menuInfoMenu.menuInfo(num1, num2);
+        }
     }
 }
 
@@ -84,8 +86,38 @@ class Functions{
     }
 }
 
+class MultiVar{
+
+    public void multiVariable(int opt) {
+        Scanner variable = new Scanner(System.in);
+
+        int i = 0;
+        while (true) {
+
+            i++;
+
+            int num = variable.nextInt();
+            System.out.println(num);
+            
+            if (i==opt) {break;}
+        }    
+    }
+}
 
 class Messages{
+
+    public void msgWelcome(){
+        System.out.println("Welcome to the calculator, enter the number of numbers to which you want to apply an operation");
+    }
+
+    public void msgFirstNumber(){
+        System.out.println("First number:");
+    }
+
+    public void msgSecondNumber(){
+        System.out.println("Second number:");
+    }
+
     public void msgMenu(){
         System.out.println("Enter the option you want to perform: ");
         System.out.println("1- Sum");
