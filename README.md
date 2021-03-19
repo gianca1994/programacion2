@@ -1,5 +1,3 @@
-# programacion2
-
 <h1 align="center">👋 Welcome to this programming repository 2 👋</h1>
 
 
