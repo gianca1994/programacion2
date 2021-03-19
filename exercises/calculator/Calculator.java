@@ -3,6 +3,12 @@ package calculator;
 import java.util.Scanner;
 
 class Main {
+
+    static final String welcome = "Welcome to the calculator, enter the number " +
+            "of numbers to which you want to apply an operation";
+    static final String firstNumber = "First number:";
+    static final String secondNumber = "Second number:";
+
     public static void main(String[] args) {
 
         Menu menuInfoMenu = new Menu();
@@ -11,40 +17,20 @@ class Main {
         Scanner variable = new Scanner(System.in);
         int num1, num2, num_of_numbers;
 
-        messages.msgWelcome();
+        messages.print_msg(welcome);
 
         num_of_numbers = variable.nextInt();
 
         if (num_of_numbers > 2) {
             multivar.multiVariable(num_of_numbers);
         } else {
-            messages.msgFirstNumber();
+            messages.print_msg(firstNumber);
             num1 = variable.nextInt();
 
-            messages.msgSecondNumber();
+            messages.print_msg(secondNumber);
             num2 = variable.nextInt();
 
             menuInfoMenu.menuInfo(num1, num2);
-        }
-    }
-}
-
-class MultiVar {
-
-    public void multiVariable(int opt) {
-        Scanner variable = new Scanner(System.in);
-
-        int i = 0;
-        while (true) {
-
-            i++;
-
-            int num = variable.nextInt();
-            System.out.println(num);
-
-            if (i == opt) {
-                break;
-            }
         }
     }
 }
