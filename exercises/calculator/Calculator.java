@@ -14,14 +14,15 @@ class Main {
         Messages messages = new Messages();
         MultiVar multivar = new MultiVar();
         Scanner variable = new Scanner(System.in);
-        int num1, num2, num_of_numbers;
+        int num_of_numbers, num1, num2;
 
         messages.print_msg(welcome);
 
         num_of_numbers = variable.nextInt();
 
         if (num_of_numbers > 2) {
-            multivar.multiVariable(num_of_numbers);
+            // ANDA MAL JEJE
+            // multivar.multiVariable(num_of_numbers);
         } else {
             messages.print_msg(firstNumber);
             num1 = variable.nextInt();
@@ -31,6 +32,8 @@ class Main {
 
             menuInfoMenu.menuInfo(num1, num2);
         }
+
+        //multivar.multiVariable(num_of_numbers);
     }
 }
 
