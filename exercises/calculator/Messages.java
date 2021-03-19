@@ -6,11 +6,7 @@ public class Messages {
         System.out.println(msg);
     }
 
-    public void print_result(String msg, int val){
-        System.out.println(msg + val);
-    }
-
-    public void print_result_div(String msg, float val){
+    public void print_result(String msg, double val){
         System.out.println(msg + val);
     }
 }

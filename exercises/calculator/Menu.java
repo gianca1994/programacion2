@@ -12,7 +12,7 @@ public class Menu {
             4- Division
             5- Exit""";
 
-    public void menuInfo(int num1, int num2) {
+    public void menuInfo(double num1, double num2) {
 
         Scanner variable = new Scanner(System.in);
         Functions function = new Functions();

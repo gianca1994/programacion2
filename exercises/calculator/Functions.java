@@ -3,28 +3,29 @@ package calculator;
 public class Functions {
     Messages messages = new Messages();
 
-    static final String msgSum = "Result of the sum: ";
-    static final String msgSubtrac = "Result of the subtraction: ";
-    static final String msgmult = "Multiplication result: ";
-    static final String msgdiv = "Division result: ";
+    static final String msgSum = "Result of the sum: ", msgSubtrac = "Result of the subtraction: ",
+            msgmult = "Multiplication result: ", msgdiv = "Division result: ";
 
-    public void sum(int num1, int num2) {
-        int resultSum = num1 + num2;
+
+    double resultSum, resultSubtraction, resultMultiplication, resultDivision;
+
+    public void sum(double num1, double num2) {
+        resultSum = num1 + num2;
         messages.print_result(msgSum,resultSum);
     }
 
-    public void subtraction(int num1, int num2) {
-        int resultSubtraction = num1 - num2;
+    public void subtraction(double num1, double num2) {
+        resultSubtraction = num1 - num2;
         messages.print_result(msgSubtrac,resultSubtraction);
     }
 
-    public void multiplication(int num1, int num2) {
-        int resultMultiplication = num1 * num2;
+    public void multiplication(double num1, double num2) {
+        resultMultiplication = num1 * num2;
         messages.print_result(msgmult,resultMultiplication);
     }
 
-    public void division(float num1, float num2) {
-        float resultDivision = num1 / num2;
-        messages.print_result_div(msgdiv,resultDivision);
+    public void division(double num1, double num2) {
+        resultDivision = num1 / num2;
+        messages.print_result(msgdiv,resultDivision);
     }
 }

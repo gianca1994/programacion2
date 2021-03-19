@@ -5,9 +5,8 @@ import java.util.Scanner;
 class Main {
 
     static final String welcome = "Welcome to the calculator, enter the number " +
-            "of numbers to which you want to apply an operation";
-    static final String firstNumber = "First number:";
-    static final String secondNumber = "Second number:";
+            "of numbers to which you want to apply an operation",
+            firstNumber = "First number:", secondNumber = "Second number:";
 
     public static void main(String[] args) {
 
