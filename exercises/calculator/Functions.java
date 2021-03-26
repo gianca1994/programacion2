@@ -3,32 +3,28 @@ package calculator;
 import java.util.ArrayList;
 
 public class Functions {
-    Messages messages = new Messages();
-
-    static final String msgSum = "Result of the sum: ", msgSubtrac = "Result of the subtraction: ",
-            msgmult = "Multiplication result: ", msgdiv = "Division result: ";
-
+    Messages msg = new Messages();
 
     double sum ,resultSubtraction, resultMultiplication, resultDivision;
 
     public void sum(double num1, double num2) {
         resultSubtraction = num1 + num2;
-        messages.print_result(msgSum,resultSubtraction);
+        msg.print_result(msg.msgSum,resultSubtraction);
     }
 
     public void subtraction(double num1, double num2) {
         resultSubtraction = num1 - num2;
-        messages.print_result(msgSubtrac,resultSubtraction);
+        msg.print_result(msg.msgSubtrac,resultSubtraction);
     }
 
     public void multiplication(double num1, double num2) {
         resultMultiplication = num1 * num2;
-        messages.print_result(msgmult,resultMultiplication);
+        msg.print_result(msg.msgmult,resultMultiplication);
     }
 
     public void division(double num1, double num2) {
         resultDivision = num1 / num2;
-        messages.print_result(msgdiv,resultDivision);
+        msg.print_result(msg.msgdiv,resultDivision);
     }
 
 /*
