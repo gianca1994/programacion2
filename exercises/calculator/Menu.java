@@ -17,22 +17,18 @@ public class Menu {
 
         switch (opt) {
             case 1:
-                //function.sum(args);
                 function.sum(num1, num2);
                 break;
 
             case 2:
-                //function.subtraction(args);
                 function.subtraction(num1, num2);
                 break;
 
             case 3:
-                //function.multiplication(args);
                 function.multiplication(num1, num2);
                 break;
 
             case 4:
-                //function.division(args);
                 function.division(num1, num2);
                 break;
 
