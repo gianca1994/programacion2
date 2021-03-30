@@ -1,7 +1,8 @@
 package calculator;
 
-import java.util.ArrayList;
 import java.util.Scanner;
+
+import static calculator.Messages.*;
 
 public class Menu {
 
@@ -9,9 +10,8 @@ public class Menu {
 
         Scanner variable = new Scanner(System.in);
         Functions function = new Functions();
-        Messages msg = new Messages();
 
-        msg.print_msg(msg.menu);
+        print_msg(MENU);
 
         int opt = variable.nextInt();
 

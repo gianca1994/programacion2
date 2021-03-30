@@ -1,67 +1,28 @@
 package calculator;
 
-import java.util.ArrayList;
+import static calculator.Messages.*;
 
 public class Functions {
-    Messages msg = new Messages();
 
-    double sum ,resultSubtraction, resultMultiplication, resultDivision;
+    double resultSum, resultSubtraction, resultMultiplication, resultDivision;
 
     public void sum(double num1, double num2) {
-        resultSubtraction = num1 + num2;
-        msg.print_result(msg.msgSum,resultSubtraction);
+        resultSum = num1 + num2;
+        print_result(MSG_SUM, resultSum);
     }
 
     public void subtraction(double num1, double num2) {
         resultSubtraction = num1 - num2;
-        msg.print_result(msg.msgSubtrac,resultSubtraction);
+        print_result(MSG_SUBTRAC, resultSubtraction);
     }
 
     public void multiplication(double num1, double num2) {
         resultMultiplication = num1 * num2;
-        msg.print_result(msg.msgmult,resultMultiplication);
+        print_result(MSG_MULT, resultMultiplication);
     }
 
     public void division(double num1, double num2) {
         resultDivision = num1 / num2;
-        msg.print_result(msg.msgdiv,resultDivision);
+        print_result(MSG_DIV, resultDivision);
     }
-
-/*
-    public void sum(ArrayList<Integer> args) {
-        int sum = 0;
-        for (int arg : args) {
-            sum = (sum + arg);
-        }
-        messages.print_result(msgSum, sum);
-    }
-
-    public void subtraction(ArrayList<Integer> args) {
-        int subtrac = 0;
-        int first_number = args.get(0);
-
-        for (int arg : args) {
-            subtrac = (first_number - arg);
-        }
-        messages.print_result(msgSubtrac, subtrac);
-    }
-
-    public void multiplication(ArrayList<Integer> args) {
-        int mult = 1;
-        for (int arg : args) {
-            mult = mult * arg;
-        }
-        messages.print_result(msgmult, mult);
-    }
-
-    public void division(ArrayList<Integer> args) {
-        int div = 0;
-        int first_num = args.get(0);
-
-        for (int arg : args) {
-            div = first_num / arg;
-        }
-        messages.print_result(msgdiv, div);
-    }
-*/
 }

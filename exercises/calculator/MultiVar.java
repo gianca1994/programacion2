@@ -1,35 +1,47 @@
 package calculator;
 
-import java.util.ArrayList;
 import java.util.Scanner;
+
+import static calculator.Messages.*;
 
 public class MultiVar {
 
-    static final String msgNumbers = "Enter a number: ";
+    Scanner variable = new Scanner(System.in);
 
-    public void multiVariable(int opt) {
-        Messages messages = new Messages();
-        Functions functions = new Functions();
-        Menu menuInfoMenu = new Menu();
-        Scanner variable = new Scanner(System.in);
-        ArrayList<Integer> listNumbers = new ArrayList();
 
-        int[] var = new int[opt + 1];
+    public void MultVar(int args) {
+
         int i;
+        double sum = 0;
+        double result;
+        double total = 0;
 
-        for (i = 1; i <= opt; i++) {
+        for (i = 1; i <= args; i++) {
 
-            messages.print_msg(msgNumbers);
-            int num = variable.nextInt();
+            int num = setNumber();
 
-            var[i] = num;
-            listNumbers.add(var[i]);
+            if (i >= args) {
+                break;
+            } else {
+                char operator = setOperator();
+                result = result(sum, operator, num);
+                total += result;
+            }
         }
+        print_result(MSG_RESULT, total);
+    }
 
-        // menuInfoMenu.menuInfo(listNumbers);
-        // functions.sum(listNumbers);
-        // functions.subtraction(listNumbers);
-        // functions.multiplication(listNumbers);
-        // functions.division(listNumbers);
+    public int result(double sum, char operator, int num) {
+        return (int) (sum + operator + num);
+    }
+
+    public char setOperator() {
+        print_msg(MSG_SYMBOLS);
+        return variable.next().charAt(0);
+    }
+
+    public int setNumber() {
+        print_msg(MSG_NUMBERS);
+        return variable.nextInt();
     }
 }
