@@ -7,37 +7,36 @@ import static calculator.Functions.*;
 
 class Calculator {
 
-    Scanner variable = new Scanner(System.in);
-
-    public void main(String[] args) throws IllegalStateException {
+    public static void main(String[] args) throws IllegalStateException {
         Menu menuInfoMenu = new Menu();
         MultiVar multivar = new MultiVar();
+        Scanner var = new Scanner(System.in);
 
         getMsgInitials();
 
         switch (setOptionSwitch()) {
-            case 1 -> menuInfoMenu.menuInfo(setFirstNumber(), setSecondNumber());
-            case 2 -> multivar.MultVar(setNumbers());
+            case 1 -> menuInfoMenu.menuInfo(setFirstNumber(var), setSecondNumber(var));
+            case 2 -> multivar.MultVar(setNumbers(var));
             default -> throw new IllegalStateException(ERROR_NUMERIC + setOptionSwitch());
         }
     }
 
-    public int setNumbers() {
+    public static int setNumbers(Scanner var) {
         print_msg(OPERATION_NUMBERS);
-        return variable.nextInt();
+        return var.nextInt();
     }
 
-    public int setFirstNumber() {
+    public static int setFirstNumber(Scanner var) {
         print_msg(FIRST_NUMBER);
-        return variable.nextInt();
+        return var.nextInt();
     }
 
-    public int setSecondNumber() {
+    public static int setSecondNumber(Scanner var) {
         print_msg(SECOND_NUMBER);
-        return variable.nextInt();
+        return var.nextInt();
     }
 
-    public void getMsgInitials() {
+    public static void getMsgInitials() {
         print_msg(WELCOME);
         print_msg(MENU_SELECT);
     }
