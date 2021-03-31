@@ -9,13 +9,10 @@ public class MultiVar {
 
     Scanner variable = new Scanner(System.in);
 
-
     public void MultVar(int args) {
 
         int i;
-        double sum = 0;
-        double result;
-        double total = 0;
+        double sum = 0, total = 0, result;
 
         for (i = 1; i <= args; i++) {
 

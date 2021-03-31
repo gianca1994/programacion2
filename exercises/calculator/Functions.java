@@ -44,6 +44,26 @@ public class Functions {
         return sc.nextInt();
     }
 
+    public static int setNumbers(Scanner var) {
+        print_msg(OPERATION_NUMBERS);
+        return var.nextInt();
+    }
+
+    public static int setFirstNumber(Scanner var) {
+        print_msg(FIRST_NUMBER);
+        return var.nextInt();
+    }
+
+    public static int setSecondNumber(Scanner var) {
+        print_msg(SECOND_NUMBER);
+        return var.nextInt();
+    }
+
+    public static void getMsgInitials() {
+        print_msg(WELCOME);
+        print_msg(MENU_SELECT);
+    }
+
     public static void print_msg(String msg) {
         System.out.println(msg);
     }
