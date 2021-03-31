@@ -3,7 +3,7 @@ package calculator;
 import java.util.Scanner;
 
 import static calculator.Messages.*;
-import static calculator.Functions.*;
+import static calculator.Printer.*;
 
 public class MultiVar {
 
