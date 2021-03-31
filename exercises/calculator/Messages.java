@@ -2,13 +2,6 @@ package calculator;
 
 public class Messages {
 
-    public static void print_msg(String msg){
-        System.out.println(msg);
-    }
-
-    public static void print_result(String msg, double val){
-        System.out.println(msg + val);
-    }
 
     final static String ERROR_NUMERIC = "Unexpected value: ";
 
@@ -36,7 +29,7 @@ public class Messages {
             """,
             FIRST_NUMBER = "First number:", SECOND_NUMBER = "Second number:";
 
-    final static String MSG_NUMBERS = "Enter a number: ";
-    final static String MSG_SYMBOLS = "Enter a symbol: ";
-    final static String MSG_RESULT = "Operation result: ";
+    final static String MSG_NUMBERS = "Enter a number: ", MSG_OPERATOR = "Enter a operator: ",
+            MSG_RESULT = "Operation result: ";
+
 }

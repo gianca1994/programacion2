@@ -3,6 +3,7 @@ package calculator;
 import java.util.Scanner;
 
 import static calculator.Messages.*;
+import static calculator.Functions.*;
 
 public class MultiVar {
 
@@ -36,7 +37,7 @@ public class MultiVar {
     }
 
     public char setOperator() {
-        print_msg(MSG_SYMBOLS);
+        print_msg(MSG_OPERATOR);
         return variable.next().charAt(0);
     }
 

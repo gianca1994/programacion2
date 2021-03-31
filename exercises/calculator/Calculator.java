@@ -3,40 +3,43 @@ package calculator;
 import java.util.Scanner;
 
 import static calculator.Messages.*;
+import static calculator.Functions.*;
 
 class Calculator {
 
-    public static void main(String[] args) throws IllegalStateException {
+    Scanner variable = new Scanner(System.in);
 
+    public void main(String[] args) throws IllegalStateException {
         Menu menuInfoMenu = new Menu();
         MultiVar multivar = new MultiVar();
-        Scanner variable = new Scanner(System.in);
-        int num_of_numbers, num1, num2, opt;
 
+        getMsgInitials();
+
+        switch (setOptionSwitch()) {
+            case 1 -> menuInfoMenu.menuInfo(setFirstNumber(), setSecondNumber());
+            case 2 -> multivar.MultVar(setNumbers());
+            default -> throw new IllegalStateException(ERROR_NUMERIC + setOptionSwitch());
+        }
+    }
+
+    public int setNumbers() {
+        print_msg(OPERATION_NUMBERS);
+        return variable.nextInt();
+    }
+
+    public int setFirstNumber() {
+        print_msg(FIRST_NUMBER);
+        return variable.nextInt();
+    }
+
+    public int setSecondNumber() {
+        print_msg(SECOND_NUMBER);
+        return variable.nextInt();
+    }
+
+    public void getMsgInitials() {
         print_msg(WELCOME);
         print_msg(MENU_SELECT);
-
-        opt = variable.nextInt();
-
-        switch (opt) {
-
-            case 1:
-                print_msg(FIRST_NUMBER);
-                num1 = variable.nextInt();
-
-                print_msg(SECOND_NUMBER);
-                num2 = variable.nextInt();
-
-                menuInfoMenu.menuInfo(num1, num2);
-
-            case 2:
-                print_msg(OPERATION_NUMBERS);
-                num_of_numbers = variable.nextInt();
-                multivar.MultVar(num_of_numbers);
-
-            default:
-                throw new IllegalStateException(ERROR_NUMERIC + opt);
-        }
     }
 }
 

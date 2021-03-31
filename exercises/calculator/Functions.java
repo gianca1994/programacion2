@@ -1,28 +1,55 @@
 package calculator;
 
+import java.util.Scanner;
+
 import static calculator.Messages.*;
+
 
 public class Functions {
 
-    double resultSum, resultSubtraction, resultMultiplication, resultDivision;
-
-    public void sum(double num1, double num2) {
-        resultSum = num1 + num2;
-        print_result(MSG_SUM, resultSum);
+    public static double doSum(double num1, double num2) {
+        return num1 + num2;
     }
 
-    public void subtraction(double num1, double num2) {
-        resultSubtraction = num1 - num2;
-        print_result(MSG_SUBTRAC, resultSubtraction);
+    public static double doSubtraction(double num1, double num2) {
+        return num1 - num2;
     }
 
-    public void multiplication(double num1, double num2) {
-        resultMultiplication = num1 * num2;
-        print_result(MSG_MULT, resultMultiplication);
+    public static double doMultiplication(double num1, double num2) {
+        return num1 * num2;
     }
 
-    public void division(double num1, double num2) {
-        resultDivision = num1 / num2;
-        print_result(MSG_DIV, resultDivision);
+    public static double doDivision(double num1, double num2) {
+        return num1 / num2;
     }
+
+    public static void sum(double result) {
+        print_result(MSG_SUM, result);
+    }
+
+    public static void subtraction(double result) {
+        print_result(MSG_SUBTRAC, result);
+    }
+
+    public static void multiplication(double result) {
+        print_result(MSG_MULT, result);
+    }
+
+    public static void division(double result) {
+        print_result(MSG_DIV, result);
+    }
+
+    public static int setOptionSwitch() {
+        Scanner sc = new Scanner(System.in);
+        return sc.nextInt();
+    }
+
+    public static void print_msg(String msg) {
+        System.out.println(msg);
+    }
+
+    public static void print_result(String msg, double val) {
+        System.out.println(msg + val);
+    }
+
 }
