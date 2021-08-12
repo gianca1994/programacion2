@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="js/calculator.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>CalculatorWeb</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+
+        <div class=" box-shadow col-md-4">
+            <h1>Calculator</h1>
+            <form>
+              <label>First Number</label><b></b>
+              <input type="number" class="form-control" id="number1" /><br />
+
+              <label>Second Number</label><br />
+              <input
+                type="number"
+                class="form-control"
+                id="number2"
+              /><br /><br />
+
+              <label>Operations</label><br />
+              <select name="Operations" class="form-control" id="operations">
+                <option value="1">SUM</option>
+                <option value="2">SUBSTRACT</option>
+                <option value="3">MULTIPLICATION</option>
+                <option value="4">DIVITION</option>
+              </select>
+              <br /><br />
+
+              <button
+                type="button"
+                class="boton btn btn-success mx-auto"
+                onclick="calculator(Operations.value)"
+              >
+                Submit</button
+              ><br />
+            </form>
+            <br /><br />
+            <label class="control-label">Result</label><br />
+            <div id="result" class="alert alert-success" role="alert">...</div>
+        </div>
+
+        <div class="col-md-4 d-none d-md-block"></div>
+      </div>
+    </div>
+  </body>
+</html>
