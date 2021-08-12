@@ -1,28 +1,51 @@
-function setResult(id, message){
-    return document.getElementById(id).innerHTML = message;
+function calculator(expression) {
+    let a = setNumber("number1");
+    let b = setNumber("number2");
+    return selectOperation(expression, a, b);
 }
 
-function calculator(expression) {
-    let a = Number(document.getElementById("number1").value);
-    let b = Number(document.getElementById("number2").value);
+function selectOperation(expression, num1, num2) {
     let result;
 
     switch (expression) {
         case '1':
-            result = a + b;
+            result = sum(num1, num2);
             break;
         case '2':
-            result = a - b;
+            result = substract(num1, num2);
             break;
         case '3':
-            result = a * b;
+            result = multiplication(num1, num2);
             break;
         case '4':
-            result = a / b;
-            if (b == 0) return setResult("result", "Error");
+            if (num2 === 0) return setResult("result", "Error");
+            result = divition(num1, num2);
             break;
 
     }
     return setResult("result", result);
+}
 
+function setNumber(elementId) {
+    return Number(document.getElementById(elementId).value);
+}
+
+function setResult(id, message) {
+    return document.getElementById(id).innerHTML = message;
+}
+
+function sum(num1, num2) {
+    return num1 + num2;
+}
+
+function substract(num1, num2) {
+    return num1 - num2;
+}
+
+function multiplication(num1, num2) {
+    return num1 * num2;
+}
+
+function divition(num1, num2) {
+    return num1 / num2;
 }
