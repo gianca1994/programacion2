@@ -1,6 +1,6 @@
 function calculator(expression) {
-    let a = setNumber('number1');
-    let b = setNumber('number2');
+    let a = setNumber("number1");
+    let b = setNumber("number2");
     return selectOperation(expression, a, b);
 }
 
@@ -9,30 +9,36 @@ function selectOperation(expression, num1, num2) {
     let operation;
 
     switch (expression) {
-        case '1':
+        case "1":
             result = sum(num1, num2);
-            operation = '+';
+            operation = "+";
             break;
-        case '2':
+        case "2":
             result = substract(num1, num2);
-            operation = '-';
+            operation = "-";
             break;
-        case '3':
+        case "3":
             result = multiplication(num1, num2);
-            operation = '*';
+            operation = "*";
             break;
-        case '4':
-            if (divitionIsInfinity(num2) === true) {return setResult('result', 'Error');}
+        case "4":
+            if (divitionIsInfinity(num2) === true) {
+                return setResult("result", "Error");
+            }
             result = divition(num1, num2);
-            operation = '/';
+            operation = "/";
             break;
-        case '5':
+        case "5":
             result = Math.pow(num1, num2);
-            operation = '^';
+            operation = "^";
+            break;
+        case "6":
+            result = Math.pow(num1, 1 / num2);
+            operation = "√";
             break;
     }
     result = operationDescription(operation, num1, num2) + result;
-    return setResult('result', result);
+    return setResult("result", result);
 }
 
 // Setters
@@ -41,7 +47,7 @@ function setNumber(elementId) {
 }
 
 function setResult(id, message) {
-    return document.getElementById(id).innerHTML = message;
+    return (document.getElementById(id).innerHTML = message);
 }
 
 // Check to avoid infinity as a result
@@ -67,5 +73,9 @@ function divition(num1, num2) {
 }
 
 function operationDescription(operation, num1, num2) {
-    return num1 + ' ' + operation + ' ' + num2 + ' = ';
+    if (operation == "√") {
+        return num2 + " " + operation + " " + num1 + " = ";
+    } else {
+        return num1 + " " + operation + " " + num2 + " = ";
+    }
 }
